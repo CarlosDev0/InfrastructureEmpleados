@@ -1,0 +1,144 @@
+{
+  "version": 4,
+  "terraform_version": "1.10.0",
+  "serial": 36,
+  "lineage": "c597b476-7f06-4aec-51cf-ee27db99f03a",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "docker_container",
+      "name": "sqlserver",
+      "provider": "provider[\"registry.terraform.io/kreuzwerker/docker\"]",
+      "instances": []
+    },
+    {
+      "mode": "managed",
+      "type": "docker_image",
+      "name": "backend",
+      "provider": "provider[\"registry.terraform.io/kreuzwerker/docker\"]",
+      "instances": []
+    },
+    {
+      "mode": "managed",
+      "type": "docker_image",
+      "name": "frontend",
+      "provider": "provider[\"registry.terraform.io/kreuzwerker/docker\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "build": [
+              {
+                "auth_config": [],
+                "build_arg": null,
+                "build_args": null,
+                "build_id": "",
+                "cache_from": [],
+                "cgroup_parent": "",
+                "context": "../../../Next/Dashboard",
+                "cpu_period": null,
+                "cpu_quota": null,
+                "cpu_set_cpus": "",
+                "cpu_set_mems": "",
+                "cpu_shares": null,
+                "dockerfile": "Dockerfile",
+                "extra_hosts": [],
+                "force_remove": null,
+                "isolation": "",
+                "label": null,
+                "labels": null,
+                "memory": null,
+                "memory_swap": null,
+                "network_mode": "",
+                "no_cache": null,
+                "platform": "",
+                "pull_parent": null,
+                "remote_context": "",
+                "remove": true,
+                "security_opt": [],
+                "session_id": "",
+                "shm_size": null,
+                "squash": null,
+                "suppress_output": null,
+                "tag": [],
+                "target": "",
+                "ulimit": [],
+                "version": ""
+              }
+            ],
+            "force_remove": null,
+            "id": "sha256:227a1a730443639dbde2dfe97b5e644349edd08fb01a31333c7e6102063dcc95dashboard_image",
+            "image_id": "sha256:227a1a730443639dbde2dfe97b5e644349edd08fb01a31333c7e6102063dcc95",
+            "keep_locally": null,
+            "name": "dashboard_image",
+            "platform": null,
+            "pull_triggers": null,
+            "repo_digest": "",
+            "triggers": null
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "docker_network",
+      "name": "app_network",
+      "provider": "provider[\"registry.terraform.io/kreuzwerker/docker\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "attachable": false,
+            "check_duplicate": null,
+            "driver": "bridge",
+            "id": "d9af89367600ff8f3e488f72fa58d5f9ad4de2aa5e9915f05ae0c6fcc8056bab",
+            "ingress": false,
+            "internal": false,
+            "ipam_config": [
+              {
+                "aux_address": {},
+                "gateway": "172.19.0.1",
+                "ip_range": "",
+                "subnet": "172.19.0.0/16"
+              }
+            ],
+            "ipam_driver": "default",
+            "ipam_options": null,
+            "ipv6": false,
+            "labels": [],
+            "name": "app_network",
+            "options": {},
+            "scope": "local"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "docker_volume",
+      "name": "sqlserver_data",
+      "provider": "provider[\"registry.terraform.io/kreuzwerker/docker\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "driver": "local",
+            "driver_opts": null,
+            "id": "sqlserver_data",
+            "labels": [],
+            "mountpoint": "/var/lib/docker/volumes/sqlserver_data/_data",
+            "name": "sqlserver_data"
+          },
+          "sensitive_attributes": [],
+          "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
